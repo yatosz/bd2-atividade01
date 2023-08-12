@@ -14,10 +14,11 @@ docker-compose up -d
 
 ### Passo 03
 Execute seu SGBD e configure uma nova conexão com os seguintes parâmetros:
-
+```
 Datasource: PostgreSQL
 Host: localhost
 Port: 5438
 Authentication: User & Password
 User: postgres
 Password: postgres
+```
