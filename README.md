@@ -8,7 +8,7 @@ Instalar [DockerDesktop](https://www.docker.com/products/docker-desktop/) e segu
 ### Passo 02
 Execute o DockerDesktop e assim que terminar de iniciar o processo, abra o terminal no diretorio deste projeto e execute o seguinte comando
 
-```bash
+``` bash
 docker-compose up -d
 ```
 
