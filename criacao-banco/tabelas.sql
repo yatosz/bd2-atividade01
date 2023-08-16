@@ -51,3 +51,15 @@ create table paisesTecnicos (
   	idTecnico int constraint pk_fk_paisesTecnicos_tecnico references tecnico(id) primary key,
   	pais varchar(50)
 );
+
+create table jogo (
+  id serial constraint pk_jogo primary key,
+  dataJogo date not null,
+  idEquipeCasa int not null constraint fk_jogo_equipe_casa references equipe(id),
+  idEquipeFora int not null constraint fk_jogo_equipe_fora references equipe(id),
+  golsEquipeCasa int not null constraint df_j_golsEquipeCasa default 0,
+  golsEquipeFora int not null constraint df_j_golsEquipeFora default 0,
+  idCidade int not null constraint fk_jogo_cidade references cidade(id),
+  estadio varchar(100) not null,
+  idCampeonato int not null constraint fk_jogo_campeonato references campeonato(id)
+);
