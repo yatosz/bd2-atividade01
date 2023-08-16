@@ -24,7 +24,7 @@ create table tecnico (
   id serial constraint pk_tecnico primary key,
   cpf varchar(100),
   nome varchar(50),
-  idEquipe int constraint pk_tecnico_equipe references equipe(id),
+  idEquipe int constraint fk_tecnico_equipe references equipe(id),
   dataNascimento date
 );
 
@@ -33,7 +33,7 @@ create table jogadorBrasileiro (
   cpf varchar(14),
   nome varchar(50),
   posicao varchar(50),
-  idEquipe int constraint pk_jogadorBrasileiro_equipe references equipe(id),
+  idEquipe int constraint fk_jogadorBrasileiro_equipe references equipe(id),
   salario decimal(15,2)
 );
 
@@ -42,12 +42,12 @@ create table jogadorEstrangeiro (
   passaporte varchar(50),
   nome varchar(50),
   posicao varchar(50),
-  idEquipe int constraint pk_jogadorBrasileiro_equipe references equipe(id),
+  idEquipe int constraint fk_jogadorBrasileiro_equipe references equipe(id),
   paisOrigem varchar(50),
   salario decimal(15,2)
 );
 
 create table paisesTecnicos (
-  	idTecnico int constraint fk_paisesTecnicos_tecnico references tecnico(id) primary key,
+  	idTecnico int constraint pk_fk_paisesTecnicos_tecnico references tecnico(id) primary key,
   	pais varchar(50)
 );
